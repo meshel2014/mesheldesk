@@ -12,6 +12,16 @@
 * `libs/scrap/` screen capture
 * `libs/enigo/` input control
 * `libs/clipboard/` clipboard
+
+## MeshelDesk Fork Facts
+
+* Product name: `MeshelDesk` (the ASCII runtime name is intentional because it is also used in executable names, IPC paths, and configuration directories).
+* Public rendezvous server: `remote.meshel.cn:21116`.
+* Public relay server: `remote.meshel.cn:21117`.
+* Server public key: `oVvhm7iAfi5UZ3j9++b7ysrtMEvyKBz+iLgEzSzrzgE=`. This is public client configuration; never commit the matching `id_ed25519` private key.
+* The fork applies and locks its server configuration in `src/mesheldesk.rs`. Keep that module in the main repository rather than modifying the `libs/hbb_common` submodule.
+* The server-settings UI is hidden and upstream auto-update is disabled. Keep UAC elevation and service installation available for support sessions.
+* `.github/workflows/mesheldesk-windows.yml` is the supported manual build path and produces one Windows x64 self-extracting portable executable.
 * `libs/hbb_common/src/config.rs` all options
 
 ### Key Components

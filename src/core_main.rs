@@ -38,6 +38,7 @@ pub fn core_main() -> Option<Vec<String>> {
         // return None to terminate the process
         return None;
     }
+    crate::mesheldesk::apply();
     let mut args = Vec::new();
     let mut flutter_args = Vec::new();
     let mut i = 0;

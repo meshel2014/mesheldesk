@@ -4,6 +4,7 @@ pub const APP_NAME: &str = "MeshelDesk";
 pub const ID_SERVER: &str = "remote.meshel.cn";
 pub const RELAY_SERVER: &str = "remote.meshel.cn:21117";
 pub const SERVER_KEY: &str = "oVvhm7iAfi5UZ3j9++b7ysrtMEvyKBz+iLgEzSzrzgE=";
+pub const HIDE_INSTALL_CARD: &str = "hide-install-card";
 
 pub fn apply() {
     *config::APP_NAME.write().unwrap() = APP_NAME.to_owned();
@@ -28,4 +29,8 @@ pub fn apply() {
         .write()
         .unwrap()
         .insert(keys::OPTION_HIDE_SERVER_SETTINGS.to_owned(), "Y".to_owned());
+    config::BUILTIN_SETTINGS
+        .write()
+        .unwrap()
+        .insert(HIDE_INSTALL_CARD.to_owned(), "Y".to_owned());
 }

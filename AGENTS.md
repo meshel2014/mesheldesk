@@ -21,6 +21,7 @@
 * Server public key: `oVvhm7iAfi5UZ3j9++b7ysrtMEvyKBz+iLgEzSzrzgE=`. This is public client configuration; never commit the matching `id_ed25519` private key.
 * The fork applies and locks its server configuration in `src/mesheldesk.rs`. Keep that module in the main repository rather than modifying the `libs/hbb_common` submodule.
 * The server-settings UI is hidden and upstream auto-update is disabled. Keep UAC elevation and service installation available for support sessions.
+* The Windows home-page `install_tip` card is hidden through the MeshelDesk builtin option `hide-install-card=Y`. Do not replace this with `disable-installation`: installation, elevation, and contextual permission prompts must remain available.
 * `.github/workflows/mesheldesk-windows.yml` is the supported manual build path and produces one Windows x64 self-extracting portable executable.
 * `res/icon.png` is the canonical 512 x 512 MeshelDesk icon source. Keep `flutter/assets/icon.png`, `res/icon.ico`, `res/tray-icon.ico`, and `flutter/windows/runner/resources/app_icon.ico` synchronized with it; the ICO files cover the Windows executable, portable wrapper, embedded window icon, and tray fallback.
 * `libs/hbb_common/src/config.rs` all options

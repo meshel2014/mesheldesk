@@ -57,6 +57,8 @@ jobs:
           grep -F 'pub const ID_SERVER: &str = "remote.meshel.cn";' src/mesheldesk.rs
           grep -F 'pub const RELAY_SERVER: &str = "remote.meshel.cn:21117";' src/mesheldesk.rs
           grep -F 'pub const SERVER_KEY: &str = "oVvhm7iAfi5UZ3j9++b7ysrtMEvyKBz+iLgEzSzrzgE=";' src/mesheldesk.rs
+          grep -F 'pub const HIDE_INSTALL_CARD: &str = "hide-install-card";' src/mesheldesk.rs
+          grep -F 'const String kOptionHideInstallCard = "hide-install-card";' flutter/lib/consts.dart
 
       - name: Restore generated Flutter bridge
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
